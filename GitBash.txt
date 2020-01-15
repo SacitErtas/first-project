@@ -1,0 +1,5 @@
+A repository : a place or a container where something is stored
+mkdir Git_Int : This will create a directory (or folder) named Git_Int
+cd e:/Git_Int : Change the terminal to Git_Int directory
+git init : Initialize empty Git repository
+git status : Check the status of a repository
