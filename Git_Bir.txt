@@ -1,0 +1,53 @@
+# Learn Git in 30 Minutes
+# Configuring Git
+git config --global user.name SacitErtas
+git config --global user.mail sertas@gmail.com
+# Creating a new repisotory
+# A repository : a place or a container where something is stored
+mkdir Git_SE : This will create a directory (or folder) named Git_SE
+cd e:/Git_SE : Change the terminal to Git_SE directory
+git init : Initialize empty Git repository
+# Checking the status - git status
+git status
+# Staging - git add
+git add Git_Bir.txt
+# Add everything in the directory
+# git add -Add
+# Commiting - git commit
+# A commit represents the state of our repository at a given point in time
+# To creswate a new commit we need to have at least one change added to the staging area
+git commit -m "Initial commit."
+# Connecting to a remote repository - git remote add
+# Create an empty repository at GitHub : first-project
+# In order to upload something  to a remote repo, we first have to establish a connection with it
+git remote add origin https://github.com/SacitErtas/first-project.git
+# Tradionally the main remote repository in git is callled origin
+# Uploading to a server - git push
+# git push takes two parameters :
+# the name of the remote repo (we called ours origin)
+# and the branch to push to (master is the default branch for every repo) 
+git push origin master
+# Cloning a repository - git clone
+# People can dowload your remote repository locally
+# and have a fully working copy of your project with the git clone command
+git clone https://github.com/SacitErtas/first-project.git
+# Getting changes from a server - git pull
+git pull origin master
+# Creating new branches - git branch
+# The default branch of every repository is called master
+git branch new_feature
+# Switching branches - git checkout
+git branch
+git checkout new_feature
+# Merging branches - git merge
+git add feature.txt
+git commit -m "New feature complete"
+# New feature is complete, we can go back to the master branch
+git checkout master
+# Now, if we open our project in the file browser, we'll notice that feature.text has disappeared
+# That's because we are beck in the master branch, and here feature.text was neber created
+# To biring it in, we need to git merge the two branches together
+git merge new_feature
+# The master branch is now up to date
+# The new_feature branch is no longer needed and can be removed
+git branch -d new_feature
